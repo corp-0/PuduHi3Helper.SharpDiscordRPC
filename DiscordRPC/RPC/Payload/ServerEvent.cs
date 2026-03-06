@@ -1,4 +1,5 @@
-﻿using DiscordRPC.Converters;
+﻿using System.Text.Json.Serialization;
+using DiscordRPC.Converters;
 using System;
 using System.Runtime.Serialization;
 
@@ -14,30 +15,35 @@ namespace DiscordRPC.RPC.Payload
 		/// Sent when the server is ready to accept messages
 		/// </summary>
 		[EnumValue("READY")]
+		[JsonStringEnumMemberName("READY")]
 		Ready,
 
 		/// <summary>
 		/// Sent when something bad has happened
 		/// </summary>
 		[EnumValue("ERROR")]
+		[JsonStringEnumMemberName("ERROR")]
 		Error,
 
 		/// <summary>
-		/// Join Event 
+		/// Join Event
 		/// </summary>
 		[EnumValue("ACTIVITY_JOIN")]
+		[JsonStringEnumMemberName("ACTIVITY_JOIN")]
 		ActivityJoin,
 
 		/// <summary>
 		/// Spectate Event
 		/// </summary>
 		[EnumValue("ACTIVITY_SPECTATE")]
+		[JsonStringEnumMemberName("ACTIVITY_SPECTATE")]
 		ActivitySpectate,
 
 		/// <summary>
 		/// Request Event
 		/// </summary>
 		[EnumValue("ACTIVITY_JOIN_REQUEST")]
+		[JsonStringEnumMemberName("ACTIVITY_JOIN_REQUEST")]
 		ActivityJoinRequest,
 
 #if INCLUDE_FULL_RPC
