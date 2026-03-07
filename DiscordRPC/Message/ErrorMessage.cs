@@ -18,12 +18,14 @@ namespace DiscordRPC.Message
         /// <summary>
         /// The Discord error code.
         /// </summary>
+        [JsonInclude]
         [JsonPropertyName("code")]
         public ErrorCode Code { get; internal set; }
 
         /// <summary>
         /// The message associated with the error code.
         /// </summary>
+        [JsonInclude]
         [JsonPropertyName("message")]
         public string Message { get; internal set; }
 
