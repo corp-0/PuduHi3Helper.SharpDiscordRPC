@@ -53,10 +53,9 @@ namespace DiscordRPC
 		/// The privacy of the party
 		/// </summary>
 		[JsonPropertyName("privacy")]
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
-        
 		public PrivacySetting Privacy { get; set; }
 
+		[JsonInclude]
 		[JsonPropertyName("size")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 		private int[] _size
